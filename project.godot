@@ -8,11 +8,111 @@
 
 config_version=5
 
+_global_script_classes=[{
+"base": "Object",
+"class": &"DropdownItem",
+"language": &"GDScript",
+"path": "res://addons/inventory_editor/ui_extensions/dropdown/DropdownItem.gd"
+}, {
+"base": "Resource",
+"class": &"InventoryData",
+"language": &"GDScript",
+"path": "res://addons/inventory_editor/model/InventoryData.gd"
+}, {
+"base": "EditorProperty",
+"class": &"InventoryInspectorEditorInventory",
+"language": &"GDScript",
+"path": "res://addons/inventory_editor/InventoryInspectorPluginEditorInventory.gd"
+}, {
+"base": "EditorProperty",
+"class": &"InventoryInspectorEditorItem",
+"language": &"GDScript",
+"path": "res://addons/inventory_editor/InventoryInspectorPluginEditorItem.gd"
+}, {
+"base": "EditorProperty",
+"class": &"InventoryInspectorEditorType",
+"language": &"GDScript",
+"path": "res://addons/inventory_editor/InventoryInspectorPluginEditorType.gd"
+}, {
+"base": "Resource",
+"class": &"InventoryInventories",
+"language": &"GDScript",
+"path": "res://addons/inventory_editor/InventoryManagerInventories.gd"
+}, {
+"base": "Resource",
+"class": &"InventoryInventory",
+"language": &"GDScript",
+"path": "res://addons/inventory_editor/model/InventoryInventory.gd"
+}, {
+"base": "Resource",
+"class": &"InventoryItem",
+"language": &"GDScript",
+"path": "res://addons/inventory_editor/model/InventoryItem.gd"
+}, {
+"base": "InventoryItem",
+"class": &"InventoryRecipe",
+"language": &"GDScript",
+"path": "res://addons/inventory_editor/model/InventoryRecipe.gd"
+}, {
+"base": "Resource",
+"class": &"InventoryType",
+"language": &"GDScript",
+"path": "res://addons/inventory_editor/model/InventoryType.gd"
+}, {
+"base": "Control",
+"class": &"InventoryUI",
+"language": &"GDScript",
+"path": "res://addons/inventory_editor/ui/InventoryInventoryUI.gd"
+}, {
+"base": "Node2D",
+"class": &"Item2D",
+"language": &"GDScript",
+"path": "res://addons/inventory_editor/InventoryItem2D.gd"
+}, {
+"base": "Node3D",
+"class": &"Item3D",
+"language": &"GDScript",
+"path": "res://addons/inventory_editor/InventoryItem3D.gd"
+}, {
+"base": "TextureRect",
+"class": &"ItemUI",
+"language": &"GDScript",
+"path": "res://addons/inventory_editor/ui/InventoryItemUI.gd"
+}]
+_global_script_class_icons={
+"DropdownItem": "",
+"InventoryData": "",
+"InventoryInspectorEditorInventory": "",
+"InventoryInspectorEditorItem": "",
+"InventoryInspectorEditorType": "",
+"InventoryInventories": "",
+"InventoryInventory": "",
+"InventoryItem": "",
+"InventoryRecipe": "",
+"InventoryType": "",
+"InventoryUI": "",
+"Item2D": "",
+"Item3D": "",
+"ItemUI": ""
+}
+
 [application]
 
 config/name="Cyberpunk"
 config/icon="res://icon.png"
 config/features=PackedStringArray("4.0", "Vulkan Mobile")
+
+[autoload]
+
+InventoryManager="*res://addons/inventory_editor/InventoryManager.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg", "res://addons/inventory_editor/plugin.cfg")
+
+[filesystem]
+
+import/blender/enabled=false
 
 [rendering]
 
